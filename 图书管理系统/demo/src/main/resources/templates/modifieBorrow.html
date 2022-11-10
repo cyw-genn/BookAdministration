@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改借阅</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div style="width: 600px;height: 100%;margin-left: 270px;">
+  <form action="/updateBorrow" method="post">
+    <input name="_method" type="hidden" value="put">
+    读者编号：<input class="form-control" type="text" th:value="${bkBorrows.readerNo}" name="readerNo"><br>
+    图书编号：<input class="form-control" type="text" th:value="${bkBorrows.bookNo}" name="bookNo"><br>
+    借阅日期：<input class="form-control" type="text" th:value="${bkBorrows.borrowDate}" name="borrowDate"><br>
+    借阅期限：<input class="form-control" type="text" th:value="${bkBorrows.borrowTime}" name="borrowTime"><br>
+    归还日期：<input class="form-control" type="text" th:value="${bkBorrows.returnDate}" name="returnDate"><br>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">提交</button>
+  </form>
+</div>
+</body>
+</html>

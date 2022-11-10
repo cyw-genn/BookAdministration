@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div style="width: 600px;height: 100%;margin-left: 270px;">
+    <form action="/addBook" method="post">
+        图书编号：<input class="form-control" type="text" th:value="${bookNo}" name="bookNo"><br>
+        图书名称：<input class="form-control" type="text" th:value="${bookName}" name="bookName"><br>
+        作者：<input class="form-control" type="text" th:value="${author}" name="author"><br>
+        出版社：<input class="form-control" type="text" th:value="${publisher}" name="publisher"><br>
+        价格：<input class="form-control" type="text" th:value="${price}" name="price"><br>
+        图书类别：<input class="form-control" type="text" th:value="${bookClass}" name="bookClass"><br>
+        图书位置：<input class="form-control" type="text" th:value="${bookLoc}" name="bookLoc"><br>
+        入库时间：<input class="form-control" type="text" th:value="${shopTime}" name="shopTime"><br>
+        <button class="btn btn-primary btn-lg btn-block"><font color="black">保存</font></button>
+    </form>
+</div>
+</body>
+</html>

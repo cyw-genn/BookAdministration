@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改图书</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div style="width: 600px;height: 100%;margin-left: 270px;">
+    <form action="/updateBook" method="post">
+        <input name="_method" type="hidden" value="put">
+        图书编号：<input class="form-control" type="text" th:value="${books.bookNo}" name="bookNo"><br>
+        图书名称：<input class="form-control" type="text" th:value="${books.bookName}" name="bookName"><br>
+        作者：<input class="form-control" type="text" th:value="${books.author}" name="author"><br>
+        出版社：<input class="form-control" type="text" th:value="${books.publisher}" name="publisher"><br>
+        价格：<input class="form-control" type="text" th:value="${books.price}" name="price"><br>
+        图书类别：<input class="form-control" type="text" th:value="${books.bookClass}" name="bookClass"><br>
+        图书位置：<input class="form-control" type="text" th:value="${books.bookLoc}" name="bookLoc"><br>
+        入库时间：<input class="form-control" type="text" th:value="${books.shopTime}" name="shopTime"><br>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">提交</button>
+    </form>
+</div>
+</body>
+</html>
